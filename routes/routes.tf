@@ -13,6 +13,10 @@ resource "aws_route_table" "public-subnets" {
   }
 }
 
+output "public_route_table" {
+  value = "${aws_route_table.public-subnets.id}"
+}
+
 resource "aws_route_table" "private-subnets" {
   vpc_id = "${var.vpc_id}"
 
@@ -31,3 +35,6 @@ resource "aws_route_table" "private-subnets" {
   }
 }
 
+output "private_route_table" {
+  value = "${aws_route_table.private-subnets.id}"
+}

@@ -15,7 +15,7 @@ resource "aws_subnet" "public_subnet_1a" {
 
 }
 
-output "public_subnet_id" {
+output "public_subnet_1a" {
   value = "${aws_subnet.public_subnet_1a.id}"
 }
 
@@ -31,6 +31,10 @@ resource "aws_subnet" "public_subnet_1b" {
 
 }
 
+output "public_subnet_1b" {
+  value = "${aws_subnet.public_subnet_1b.id}"
+}
+
 resource "aws_subnet" "public_subnet_1c" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1c"
@@ -41,6 +45,10 @@ resource "aws_subnet" "public_subnet_1c" {
     Name = "public-subnet-${var.environment}-1c"
   }
 
+}
+
+output "public_subnet_1c" {
+  value = "${aws_subnet.public_subnet_1c.id}"
 }
 
 resource "aws_subnet" "public_subnet_1d" {
@@ -55,6 +63,10 @@ resource "aws_subnet" "public_subnet_1d" {
 
 }
 
+output "public_subnet_1d" {
+  value = "${aws_subnet.public_subnet_1d.id}"
+}
+
 resource "aws_subnet" "public_subnet_1e" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1e"
@@ -65,6 +77,10 @@ resource "aws_subnet" "public_subnet_1e" {
     Name = "public-subnet-${var.environment}-1e"
   }
 
+}
+
+output "public_subnet_1e" {
+  value = "${aws_subnet.public_subnet_1e.id}"
 }
 
 resource "aws_subnet" "public_subnet_1f" {
@@ -79,6 +95,9 @@ resource "aws_subnet" "public_subnet_1f" {
 
 }
 
+output "public_subnet_1f" {
+  value = "${aws_subnet.public_subnet_1f.id}"
+}
 
 # PRIVATE SUBNETS:
 
@@ -93,6 +112,10 @@ resource "aws_subnet" "private_subnet_1a" {
 
 }
 
+output "private_subnet_1a" {
+  value = "${aws_subnet.private_subnet_1a.id}"
+}
+
 resource "aws_subnet" "private_subnet_1b" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1b"
@@ -102,6 +125,10 @@ resource "aws_subnet" "private_subnet_1b" {
     Name = "private-subnet-${var.environment}-1b"
   }
 
+}
+
+output "private_subnet_1b" {
+  value = "${aws_subnet.private_subnet_1b.id}"
 }
 
 resource "aws_subnet" "private_subnet_1c" {
@@ -115,6 +142,10 @@ resource "aws_subnet" "private_subnet_1c" {
 
 }
 
+output "private_subnet_1c" {
+  value = "${aws_subnet.private_subnet_1c.id}"
+}
+
 resource "aws_subnet" "private_subnet_1d" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1d"
@@ -124,6 +155,10 @@ resource "aws_subnet" "private_subnet_1d" {
     Name = "private-subnet-${var.environment}-1d"
   }
 
+}
+
+output "private_subnet_1d" {
+  value = "${aws_subnet.private_subnet_1d.id}"
 }
 
 resource "aws_subnet" "private_subnet_1e" {
@@ -137,6 +172,10 @@ resource "aws_subnet" "private_subnet_1e" {
 
 }
 
+output "private_subnet_1e" {
+  value = "${aws_subnet.private_subnet_1e.id}"
+}
+
 resource "aws_subnet" "private_subnet_1f" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1f"
@@ -148,3 +187,6 @@ resource "aws_subnet" "private_subnet_1f" {
 
 }
 
+output "private_subnet_1f" {
+  value = "${aws_subnet.private_subnet_1f.id}"
+}

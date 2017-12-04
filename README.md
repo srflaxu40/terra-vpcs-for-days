@@ -2,29 +2,31 @@
 
 ---
 
-* In order to use Terraform, first install:
+This code will create a production-grade VPC in us-east-1.  It does _not_
+setup a VPN.  If you'd like to create a VPN later, please see [ansible-m31](https://github.com/srflaxu40/ansible-m31).
 
-https://www.terraform.io/intro/getting-started/install.html
+To change the region, subnets and availability zones you will have to update the `TF_VAR_region` variable, and
+also the following files:
+```
+subnet/subnet.tf
+subnet/variables.tf
+routes/routes.tf
+routes/variables.tf
+associate_routes/associate_routes.tf
+associate_routes/variables.tf
+```
+Be sure to update the subnets, and AZs to reflect the count and makeup of your region.
+
+* [Installing Terraform](https://www.terraform.io/intro/getting-started/install.html)
+
+* Export your AWS creds:
+```
+export AWS_ACCESS_KEY_ID=redacted
+export AWS_SECRET_ACCESS_KEY=redacted
+```
 
 * Now, export your AWS-related environment credentials:
 * `source tf_env_variables`
-
-* NOTE - Do not attempt to run Terraform modules singularly as this is a known issue that Terraform may attempt
-  to re-create your resources adding duplicates in casees.
-
-* You can also export your credentials file location (typically `~/.aws/credentials`::
-
-`AWS_SHARED_CREDENTIALS_FILE`
-
-* Now, pull down your terraform modules locally:
-
-`terraform get`
-
-* You are now ready to plan:
-
-`terraform plan`
-
----
 
 * Now terraform:
 
@@ -33,9 +35,10 @@ jknepper@MacBook-Pro-3> terraform init
 jknepper@MacBook-Pro-3> terraform get
 jknepper@MacBook-Pro-3> terraform plan
 jknepper@MacBook-Pro-3> terraform apply
+jknepper@MacBook-Pro-3> terraform destroy
 ```
 
-## Notes
+## Notes:
 
 * This only works in us-east-1 as it has 6 AZs (a-f), and most others do not.
 * Note that this does *not* configure the route for your VPN.  That route needs to be explicitly added to your route tables
