@@ -15,6 +15,10 @@ resource "aws_subnet" "public_subnet_1a" {
 
 }
 
+output "public_subnet_id" {
+  value = "${aws_subnet.public_subnet_1a.id}"
+}
+
 resource "aws_subnet" "public_subnet_1b" {
   vpc_id = "${var.vpc_id}"
   availability_zone = "us-east-1b"

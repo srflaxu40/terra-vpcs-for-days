@@ -30,5 +30,26 @@ module "subnet" {
   vpc_id = "${module.vpc.vpc_id}"
   environment = "${var.environment}"
 
+  public_subnet_id = "${module.subnet.public_subnet_id}"
+
 }
 
+module "routes" {
+  source = "./routes"
+
+  vpc_id = "${module.vpc.vpc_id}"
+  environment = "${var.environment}"
+ 
+  gateway_id = "${module.igw.gateway_id}"
+
+}
+
+module "nat" {
+  source = "./nat"
+
+  vpc_id = "${module.vpc.vpc_id}"
+  environment = "${var.environment}"
+ 
+  public_subnet_id = "${module.subnet.public_subnet_id}"
+
+}

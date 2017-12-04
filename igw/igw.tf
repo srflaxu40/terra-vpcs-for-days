@@ -9,3 +9,7 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
+output "gateway_id" {
+  value = "${aws_internet_gateway.gw.id}"
+}
+
