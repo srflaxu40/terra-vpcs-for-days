@@ -35,3 +35,7 @@ jknepper@MacBook-Pro-3> terraform plan
 jknepper@MacBook-Pro-3> terraform apply
 ```
 
+## Notes
+
+* This only works in us-east-1 as it has 6 AZs (a-f), and most others do not.
+

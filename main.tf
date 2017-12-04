@@ -11,9 +11,23 @@ provider "aws" {
 
 module "vpc" {
   source = "./vpc"
-  subnet_one = "${var.subnet_one}"
-  subnet_two = "${var.subnet_two}"
 
+  environment = "${var.environment}"
+
+}
+
+module "igw" {
+  source = "./igw"
+
+  vpc_id = "${module.vpc.vpc_id}"
+  environment = "${var.environment}"
+
+}
+
+module "subnet" {
+  source = "./subnet"
+
+  vpc_id = "${module.vpc.vpc_id}"
   environment = "${var.environment}"
 
 }
