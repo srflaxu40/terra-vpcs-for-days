@@ -38,4 +38,5 @@ jknepper@MacBook-Pro-3> terraform apply
 ## Notes
 
 * This only works in us-east-1 as it has 6 AZs (a-f), and most others do not.
-
+* Note that this does *not* configure the route for your VPN.  That route needs to be explicitly added to your route tables
+  based on the network block of the VPN connection that you choose.

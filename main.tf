@@ -51,5 +51,6 @@ module "nat" {
   environment = "${var.environment}"
  
   public_subnet_id = "${module.subnet.public_subnet_id}"
+  nat_id = "${module.nat.nat_id}"
 
 }
