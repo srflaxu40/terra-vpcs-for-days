@@ -9,6 +9,8 @@ To change the region, subnets and availability zones you will have to update the
 also the following files:
 ```
 subnet/subnet.tf
+associate_rourtes/associate_routes.tf
+associate_routes/variables.tf
 ```
 Be sure to update the subnets, and AZs to reflect the count and makeup of your region.
 
