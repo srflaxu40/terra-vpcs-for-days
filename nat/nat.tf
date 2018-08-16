@@ -1,9 +1,8 @@
 # Create NAT
 # This does:
-# 1.  Creates SG
-# 2.  Creates network interface
-# 3.  Creates EIP associating with network interface
-# 4.  Creates NAT GW associating it with EIP
+# 1.  Creates EIP associating with network interface.
+# 2.  Creates network interface, and associates it with the EIP.
+# 3.  Returns NAT ID as outputted variable.
 
 resource "aws_eip" "nat" {
   vpc      = true

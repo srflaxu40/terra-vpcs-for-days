@@ -24,6 +24,14 @@ module "igw" {
 
 }
 
+module "security-group" {
+  source = "./security-group"
+
+  vpc_id = "${module.vpc.vpc_id}"
+  environment = "${var.environment}"
+
+}
+
 module "subnet" {
   source = "./subnet"
 
