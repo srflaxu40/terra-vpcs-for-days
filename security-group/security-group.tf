@@ -22,7 +22,7 @@ resource "aws_security_group" "create_default_security_group" {
     cidr_blocks = ["10.1.0.0/16"]
   }
 
-  egresss {
+  egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"

@@ -8,7 +8,7 @@ resource "aws_route_table" "public-subnets" {
     gateway_id = "${var.gateway_id}"
   }
 
-  tags {
+  tags = {
     Name = "public-subnets-vpc-${var.environment}"
   }
 }
@@ -30,7 +30,7 @@ resource "aws_route_table" "private-subnets" {
     nat_gateway_id = "${var.nat_id}"
   }
 
-  tags {
+  tags = {
     Name = "private-subnets-vpc-${var.environment}"
   }
 }

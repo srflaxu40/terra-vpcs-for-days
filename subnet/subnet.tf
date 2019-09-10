@@ -9,7 +9,7 @@ resource "aws_subnet" "public_subnet_1a" {
   cidr_block = "10.1.1.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1a"
   }
 
@@ -25,7 +25,7 @@ resource "aws_subnet" "public_subnet_1b" {
   cidr_block = "10.1.2.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1b"
   }
 
@@ -41,7 +41,7 @@ resource "aws_subnet" "public_subnet_1c" {
   cidr_block = "10.1.3.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1c"
   }
 
@@ -57,7 +57,7 @@ resource "aws_subnet" "public_subnet_1d" {
   cidr_block = "10.1.4.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1d"
   }
 
@@ -73,7 +73,7 @@ resource "aws_subnet" "public_subnet_1e" {
   cidr_block = "10.1.5.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1e"
   }
 
@@ -89,7 +89,7 @@ resource "aws_subnet" "public_subnet_1f" {
   cidr_block = "10.1.6.0/24"
   map_public_ip_on_launch = true
 
-  tags {
+  tags = {
     Name = "public-subnet-${var.environment}-1f"
   }
 
@@ -106,7 +106,7 @@ resource "aws_subnet" "private_subnet_1a" {
   availability_zone = "us-east-1a"
   cidr_block = "10.1.7.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1a"
   }
 
@@ -121,7 +121,7 @@ resource "aws_subnet" "private_subnet_1b" {
   availability_zone = "us-east-1b"
   cidr_block = "10.1.8.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1b"
   }
 
@@ -136,7 +136,7 @@ resource "aws_subnet" "private_subnet_1c" {
   availability_zone = "us-east-1c"
   cidr_block = "10.1.9.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1c"
   }
 
@@ -151,7 +151,7 @@ resource "aws_subnet" "private_subnet_1d" {
   availability_zone = "us-east-1d"
   cidr_block = "10.1.10.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1d"
   }
 
@@ -166,7 +166,7 @@ resource "aws_subnet" "private_subnet_1e" {
   availability_zone = "us-east-1e"
   cidr_block = "10.1.11.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1e"
   }
 
@@ -181,7 +181,7 @@ resource "aws_subnet" "private_subnet_1f" {
   availability_zone = "us-east-1f"
   cidr_block = "10.1.12.0/24"
 
-  tags {
+  tags = {
     Name = "private-subnet-${var.environment}-1f"
   }
 

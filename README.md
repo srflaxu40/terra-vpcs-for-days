@@ -2,6 +2,13 @@
 
 ---
 
+## Pre-Flight:
+* This requires the following terraform and aws provider versions:
+```
+Terraform v0.12.8
++ provider.aws v2.27.0
+```
+
 This code will create a production-grade VPC in us-east-1.  It does _not_
 setup a VPN.  If you'd like to create a VPN later, please see [ansible-m31](https://github.com/srflaxu40/ansible-m31).
 
