@@ -2,3 +2,5 @@
 *tfstate
 *backup
 .env
+tf_env_variables
+*hcl

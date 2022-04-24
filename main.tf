@@ -55,6 +55,8 @@ module "routes" {
 
   vpc_id = "${module.vpc.vpc_id}"
   environment = "${var.environment}"
+
+  routes = "${var.routes}"
  
   gateway_id = "${module.igw.gateway_id}"
   nat_id = "${module.nat.nat_id}"
