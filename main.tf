@@ -9,6 +9,10 @@ provider "aws" {
   secret_key = "${var.aws_secret_access_key}"
 }
 
+terraform {
+    required_version = ">= 0.13"
+}
+
 module "vpc" {
   source = "./vpc"
 
